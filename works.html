@@ -7,7 +7,9 @@ permalink: '/works/'
 
 <div class="container">
   <div class="works-header">
-    <h1 class="page-header">Works</h1>
+    <h1 class="page-header">
+      Works
+    </h1>
   </div>
 
   <div class="works-list">
@@ -16,10 +18,8 @@ permalink: '/works/'
         {% cycle '<div class="row works">', '', '', '' %}
           <div class="col-sm-3">
             <a href="{{ post.url }}">
-              <div class="text-center">
-                <img src="{{ site.baseurl }}/images/works/{{ post.thumbnail }}" class="img-thumbnail">
-                <h2>{{ post.title }}</h2>
-              </div>
+              <img src="{{ site.baseurl }}/images/works/{{ post.thumbnail }}" class="img-thumbnail">
+              <h2 class="work-title">{{ post.title }}</h2>
             </a>
           </div>
         {% cycle '', '', '', '</div><!-- row works -->' %}
