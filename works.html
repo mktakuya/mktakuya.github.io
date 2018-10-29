@@ -5,27 +5,18 @@ permalink: '/works/'
 
 ---
 
-<div class="container">
-  <div class="works-header">
-    <h1 class="page-header">
-      Works
-    </h1>
-  </div>
-
-  <div class="works-list">
-    {% for post in site.posts %}
-      {% if post.categories contains 'works' %}
-        {% cycle '<div class="row works">', '', '', '' %}
-          <div class="col-sm-3">
-            <a href="{{ post.url }}">
-              <img src="{{ site.baseurl }}/images/works/{{ post.thumbnail }}" class="img-thumbnail">
-              <h2 class="work-title">{{ post.title }}</h2>
-            </a>
-          </div>
-        {% cycle '', '', '', '</div><!-- row works -->' %}
-      {% endif %}
-    {% endfor %}
-    {% cycle '', '</div>', '</div>', '</div>' %}
-  </div>
+<div class="works-list">
+  {% for post in site.posts %}
+    {% if post.categories contains 'works' %}
+      {% cycle '<div class="row works">', '', '', '' %}
+      <div class="col-sm-3">
+        <a href="{{ post.url }}">
+          <img src="{{ site.baseurl }}/images/works/{{ post.thumbnail }}" class="img-thumbnail">
+          <h2 class="work-title">{{ post.title }}</h2>
+        </a>
+      </div>
+      {% cycle '', '', '', '</div><!-- row works -->' %}
+    {% endif %}
+  {% endfor %}
+  {% cycle '', '</div>', '</div>', '</div>' %}
 </div>
-
