@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ja">
+  {% include head.html %}
+
+  <body>
+    <div class="container"> <div class="works-header">
+        <h1 class="page-header">
+          {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}
+          <small class="text-muted">{{ page.date | date: '%Y' }}</small>
+        </h1>
+      </div>
+
+      {{ content }}
+
+      <a href="/works/">&lt;&lt; Works</a>
+    </div>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
