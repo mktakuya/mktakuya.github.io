@@ -9,6 +9,15 @@
   padding-left: 1em;
 }
 
+.link-list {
+  margin-left: 1em;
+  border-left: 2px solid #555;
+}
+
+.link-list > li {
+  padding: .5em;
+}
+
 h2.work-title {
   margin: .1em 0 1em .5em;
   font-size: 1em;
