@@ -12,4 +12,7 @@
       enable_page_level_ads: true
     });
   </script>
+  {% if jekyll.environment == "production" %}
+    {% include ga.html %}
+  {% endif %}
 </head>
