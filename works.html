@@ -11,7 +11,7 @@ permalink: '/works/'
       {% cycle '<div class="row works">', '', '' %}
       <div class="col-sm-4">
         <a href="{{ post.url }}">
-          <img src="{{ site.baseurl }}/images/works/{{ post.thumbnail }}" class="img-thumbnail">
+          <img src="{{ site.baseurl }}/images/works/{{ post.thumbnail }}" class="rounded img-thumbnail">
           <h2 class="work-title">{{ post.title }} ({{ post.date | date: '%Y' }})</h2>
         </a>
       </div>
